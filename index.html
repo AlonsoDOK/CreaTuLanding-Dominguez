@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra tu Pato</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- React y ReactDOM -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <!-- React App -->
+    <script type="text/babel" src="./components/NavBar.js"></script>
+    <script type="text/babel" src="./components/CartWidget.js"></script>
+    <script type="text/babel" src="./components/ItemListContainer.js"></script>
+    <script type="text/babel">
+        // Componente principal App
+        const App = () => {
+            return (
+                <div>
+                    <NavBar />
+                    <ItemListContainer mensaje="¡Bienvenido a Compra tu Pato! Encuentra el pato ideal para ti." />
+                </div>
+            );
+        };
+
+        // Mostrar en el DOM
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        root.render(<App />);
+    </script>
+</body>
+</html>
